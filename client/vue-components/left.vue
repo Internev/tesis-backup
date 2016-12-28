@@ -10,7 +10,7 @@
 
 <style>
   .left{
-    border: 1px solid rgb(139, 139, 139);
+    background-color: rgb(54, 54, 54);
     display: table-cell;
     margin: 0;
     width: 30vw;
