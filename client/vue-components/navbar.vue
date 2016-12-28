@@ -35,6 +35,7 @@
     background-color: rgb(24, 24, 24);
     height: 8em;
     width: 100vw;
+    border: transparent;
   }
   .tools{
     position: relative;
@@ -45,7 +46,7 @@
   .tool-bar{
     display: table;
     width: 100%;
-    height: 50%;
+    height: 4em;
     margin-top: 4em;
   }
   .horizontal-ul{
@@ -74,6 +75,9 @@
     text-align: right;
     vertical-align: middle;
     padding-right: 2em;
+  }
+  .avatar{
+    cursor: pointer;
   }
   .glyphicon{
     color: rgb(255, 255, 255);
