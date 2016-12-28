@@ -2,6 +2,7 @@
 .AppleDouble
 .LSOverride
 
+dist/
 node_modules/
 
 logs
