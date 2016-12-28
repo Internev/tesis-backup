@@ -1,3 +1,4 @@
+<!-- Created by Duncan on 12.28.2016 -->
 <template>
   <div class="left">
     <div class="count navbar-fixed-bottom">

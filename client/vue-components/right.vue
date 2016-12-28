@@ -1,10 +1,17 @@
+<!-- Created by Duncan on 12.28.2016 -->
 <template>
   <div class="right">
-
+    <markdown></markdown>
   </div>
 </template>
 
 <script>
+  // Markdown editor --> Ready for Joel's functionality
+  import Markdown from './markdown.vue'
+
+  export default {
+    components: { Markdown }
+  }
 
 </script>
 
