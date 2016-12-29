@@ -19,5 +19,6 @@ import Right from './vue-components/right.vue'
     components: { Right }
   })
 
+// For testing only
 module.exports = {}
 
