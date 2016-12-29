@@ -1,33 +1,42 @@
 <!-- Created by Duncan on 12.28.2016 -->
 <template>
-  <div class="left">
-
+  <div class="left-side">
     <div class="tool-bar">
+      <!-- Tool bar -->
       <ul class="horizontal-ul">
         <li class="file"><span class="glyphicon glyphicon-file"></span></li>
         <li><span class="glyphicon glyphicon-repeat"></span></li>
         <li><span class="glyphicon glyphicon-comment"></span></li>
         <li><span class="glyphicon glyphicon-trash"></span></li>
       </ul>
+      <!-- end tool bar -->
     </div>
-
-    <div class="count">
-      <p>count: <span>319</span></p>
+    <!-- word counter -->
+    <div class="tool-render">
+      <div class="count">
+        <p>count: <span> {{wordCount}} </span></p>
+      </div>
     </div>
   </div>
-
+  <!-- end word counter -->
 </template>
 
 <script>
+  export default{
+    props: ['wordCount']
+  }
 
 </script>
 
 <style>
-  .left{
+  .left-side{
+    width: 30vw;
+  }
+  .tool-render{
     position: fixed;
     display: table-cell;
     z-index: 10;
-    top: 4em;
+    top: 8em;
     background-color: rgb(54, 54, 54);
     display: table-cell;
     margin: 0;
@@ -45,12 +54,12 @@
     vertical-align: middle;
   }
   .count span{
-    font-size: 20px;
+    font-size: 18px;
   }
   .count p{
     margin-top: 3em;
   }
-  .left, .count{
+  .tool-render, .count{
     left: -29.9vw;
     z-index: 2;
     -webkit-transition: left 0.5s ease-in-out;
@@ -60,11 +69,11 @@
     transition: left 0.5s ease-in-out;
   }
   .tool-bar{
-    position: relative;
+    position: fixed;
     background-color: rgb(24, 24, 24);
-    top: 0;
+    top: 4em;
     display: table;
-    width: 100%;
+    width: 30vw;
     height: 4em;
   }
   .horizontal-ul{
@@ -80,10 +89,10 @@
     background-color: rgb(54, 54, 54);
     cursor: pointer;
   }
-  .left:hover{
+  .left-side:hover .tool-render{
     left: 0;
   }
-  .left:hover .count{
+  .left-side:hover .count{
     left: 0;
   }
 </style>
