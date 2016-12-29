@@ -3,7 +3,9 @@ const Vue = require('vue');
 const ToolBar = require('../../client/vue-components/tool_bar.vue');
 
 describe('ToolBar', () => {
-  it('should exist', () => {
-    expect(typeof ToolBar).toBe('object');
-  })
+
+  // Inspect the raw component options
+  it('has a created hook', () => {
+    expect(typeof ToolBar.created).toBe('function');
+  });
 });

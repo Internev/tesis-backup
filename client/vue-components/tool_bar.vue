@@ -25,6 +25,7 @@
   import Methods from '../js/tool_bar.js'
 
   export default{
+    created() {},
     props: ['wordCount'],
     // Methods are located in js directory
     methods: Methods

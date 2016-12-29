@@ -26,14 +26,18 @@
   import Methods from '../js/main_content.js'
 
   export default {
-    components: {
-      ToolBar
+    created() {
+      // Counts words on page load
+      this.wordCounter();
     },
     data () {
       return {
-        input: '# Markdown for text editor, works try it out!',
-        count: 8
+        input: 'Markdown for text editor, works try it out!',
+        count: 0
       }
+    },
+    components: {
+      ToolBar
     },
     // Methods are located in js directory
     methods: Methods

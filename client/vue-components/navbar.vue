@@ -18,6 +18,7 @@
   import Methods from '../js/navbar.js'
 
   export default {
+    created() {},
     components: { Avatar },
     // Methods are located in js directory
     methods: Methods
