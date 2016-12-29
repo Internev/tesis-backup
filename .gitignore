@@ -4,6 +4,7 @@
 
 dist/
 node_modules/
+bower_components/
 
 logs
 *.logs

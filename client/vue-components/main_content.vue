@@ -23,6 +23,7 @@
 
 <script>
   import ToolBar from './tool_bar.vue'
+  import Methods from '../js/main_content.js'
 
   export default {
     components: {
@@ -34,16 +35,8 @@
         count: 8
       }
     },
-    methods: {
-      // Function adds each charactor to input
-      update(e) {
-        this.input = e.target.value
-      },
-      // On each keyup counts amount of words on document
-      wordCounter() {
-        this.count = this.input.split(' ').length - 1;// Minus one for accuracy
-      }
-    }
+    // Methods are located in js directory
+    methods: Methods
   }
 </script>
 

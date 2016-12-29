@@ -15,9 +15,12 @@
 
 <script>
   import Avatar from 'vue-avatar-component'
+  import Methods from '../js/navbar.js'
 
   export default {
-    components: { Avatar }
+    components: { Avatar },
+    // Methods are located in js directory
+    methods: Methods
   }
 
 </script>
