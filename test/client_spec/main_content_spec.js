@@ -1,6 +1,6 @@
 // <!-- Created by Duncan on 12.28.2016 -->
-const Vue = require('vue');
-const MainContent = require('../../client/vue-components/main_content.vue');
+import Vue from 'vue';
+import MainContent from '../../client/vue-components/main_content.vue';
 // Using this package for socket, not sure what will be needed for Go
 import VueSocketio from 'vue-socket.io'
 // Websocket connection using vue-socket.io using temp_socket server
