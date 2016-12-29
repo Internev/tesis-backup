@@ -17,9 +17,10 @@
 
 <style>
   .right{
+    position: relative;
     border: 1px solid transparent;
     display: table-cell;
-    margin: 0;
-    height: 100vh;
+    margin: 0 auto;
+    width: 70vw;
   }
 </style>
