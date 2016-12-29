@@ -15,7 +15,7 @@
 
 <style>
   .left{
-    position: relative;
+    /*position: absolute;*/
     background-color: rgb(54, 54, 54);
     display: table-cell;
     margin: 0;
