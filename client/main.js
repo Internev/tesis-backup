@@ -2,8 +2,9 @@
 import Vue from 'vue'
 import Navbar from './vue-components/navbar.vue'
 import MainContent from './vue-components/main_content.vue'
+// Using this package for socket, not sure what will be needed for Go
 import VueSocketio from 'vue-socket.io'
-// Websocket connection using vue-socket.io
+// Websocket connection using vue-socket.io using temp_socket server
 Vue.use(VueSocketio, 'http://localhost:3000');
 
   new Vue({

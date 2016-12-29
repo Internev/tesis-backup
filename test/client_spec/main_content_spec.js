@@ -1,6 +1,10 @@
 // <!-- Created by Duncan on 12.28.2016 -->
 const Vue = require('vue');
 const MainContent = require('../../client/vue-components/main_content.vue');
+// Using this package for socket, not sure what will be needed for Go
+import VueSocketio from 'vue-socket.io'
+// Websocket connection using vue-socket.io using temp_socket server
+Vue.use(VueSocketio, 'http://localhost:3000');
 
 describe('MainContent', () => {
 
@@ -29,9 +33,9 @@ describe('MainContent', () => {
     const Ctor = Vue.extend(MainContent);
     const vm = new Ctor().$mount();
     vm.update({target:{value: 'Markdown for text editor, works try it out! Plus this!'}});
-    // vm.wordCounter();
-    // expect(vm.$data.input).toBe('Markdown for text editor, works try it out! Plus this!');
-    // expect(vm.$data.count).toBe(10);
+    vm.wordCounter();
+    expect(vm.$data.input).toBe('Markdown for text editor, works try it out! Plus this!');
+    expect(vm.$data.count).toBe(10);
   })
 });
 

@@ -28,9 +28,9 @@
     created() {
       // Starts listening on page load
       this.$socket.on('textadded', (text) => {
-      this.input = text;
-      this.wordCounter();
-    });
+        this.input = text;
+        this.wordCounter();
+      });
     },
     data () {
       return {
