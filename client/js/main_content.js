@@ -5,15 +5,12 @@ module.exports = {
   // Function adds each charactor to input
   update(e) {
     this.input = e.target.value
+    // call socket io
     this.socket();
   },
   socket() {
     // Web socket connection. Only passing text so both people can save there own versions.
     this.$socket.emit('textadded', this.input);
-    this.$socket.on('textadded', (text) => {
-      this.input = text;
-      this.wordCounter();
-    });
   },
   // On each keyup counts amount of words on document
   wordCounter() {

@@ -26,8 +26,11 @@
 
   export default {
     created() {
-      // Counts words on page load
+      // Starts listening on page load
+      this.$socket.on('textadded', (text) => {
+      this.input = text;
       this.wordCounter();
+    });
     },
     data () {
       return {
