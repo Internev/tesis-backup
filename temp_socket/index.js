@@ -9,7 +9,6 @@ var io = require('socket.io')(http);
 io.on('connection', function(socket) {
   // socket.broadcast.emit('hi') // send to everyone except certian sockets
   socket.on('textadded', function(msg) {// this is where I can specify which message to send.
-    console.log(msg);
     io.emit('textadded', msg); // sends to everyone even the sender
   });
 });
