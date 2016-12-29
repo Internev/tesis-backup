@@ -22,8 +22,12 @@
 </template>
 
 <script>
+  import Methods from '../js/tool_bar.js'
+
   export default{
-    props: ['wordCount']
+    props: ['wordCount'],
+    // Methods are located in js directory
+    methods: Methods
   }
 
 </script>
