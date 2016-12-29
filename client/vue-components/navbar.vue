@@ -17,16 +17,7 @@
   import Avatar from 'vue-avatar-component'
 
   export default {
-    components: { Avatar },
-    data() {
-      return {
-      }
-    },
-    methods: {
-      mouseOver() {
-
-      }
-    }
+    components: { Avatar }
   }
 
 </script>
