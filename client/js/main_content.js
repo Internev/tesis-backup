@@ -5,30 +5,20 @@ module.exports = {
   // Function adds each charactor to input
   update(e) {
     this.input = e.target.value
+    this.socket();
+  },
+  socket() {
+    // Web socket connection. Only passing text so both people can save there own versions.
+    this.$socket.emit('textadded', this.input);
+    this.$socket.on('textadded', (text) => {
+      this.input = text;
+      this.wordCounter();
+    });
   },
   // On each keyup counts amount of words on document
   wordCounter() {
-    this.count = this.input.split(' ').length;
+    let splitIt = this.input.split(' ');
+    // filters out spaces on each 'delete' or 'spacebar' or 'enter' key up then returns the length.
+    this.count = splitIt.filter(val => val !== '').length;
   }
 }
-
-
-/*
- basic setup for socket io using jquery
-
-<script src="bower_components/underscore/underscore.js"></script>
-<script src="http://localhost:3000/socket.io/socket.io.js"></script>
-<script src></script>
-<script>
-  var socket = io.connect('http://localhost:3000');
-  $('form').submit(function() {
-    socket.emit('chat message', $('#message').val());
-    $('#message').val('');
-    return false;
-  });
-  socket.on('chat message', function(msg) {
-    $('#messages').append($('<li>').text(msg));
-  });
-</script>
-
-*/

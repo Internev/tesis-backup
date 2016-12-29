@@ -13,14 +13,13 @@
       <!-- Markdown editor -->
       <!-- Doesn't really compile markdown yet -->
       <div id="editor">
-        <textarea :value="input" @input="update" v-on:keyup="wordCounter"></textarea>
+        <textarea :value="input" @input="update" @keyup.delete="wordCounter" @keyup.space="wordCounter" @keyup.enter="wordCounter(true)"></textarea>
       </div>
       <!-- end editor -->
     </div>
     <!-- end text feild -->
   </div>
 </template>
-
 <script>
   import ToolBar from './tool_bar.vue'
   import Methods from '../js/main_content.js'

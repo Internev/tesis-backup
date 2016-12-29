@@ -3,13 +3,14 @@ var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
-app.use(express.static(__dirname));
+// app.use(express.static(__dirname));
 
 // io.emit('some event', {for: 'everyone'}); // send message to everyone
 io.on('connection', function(socket) {
   // socket.broadcast.emit('hi') // send to everyone except certian sockets
-  socket.on('chat message', function(msg) {// this is where I can specify which message to send.
-    io.emit('chat message', msg); // sends to everyone even the sender
+  socket.on('textadded', function(msg) {// this is where I can specify which message to send.
+    console.log(msg);
+    io.emit('textadded', msg); // sends to everyone even the sender
   });
 });
 
