@@ -2,8 +2,6 @@
 import Vue from 'vue';
 import Utils from '../../client/js/utils.js';
 
-//!!!! These tests must be run without hot reload running!!!!
-
 describe('Utils.send should', () => {
 
   let data = {

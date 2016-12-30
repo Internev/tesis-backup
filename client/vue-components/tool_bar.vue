@@ -23,6 +23,7 @@
 
 <script>
   import Methods from '../js/tool_bar.js'
+  // HTTP calls ect.
   import Utils from '../js/utils.js'
 
   export default{
