@@ -5,12 +5,11 @@ import Utils from '../../client/js/utils.js';
 describe('Utils.send should', () => {
 
   let data = {
-    userName: 'Test',
-    originalUserName: 'Test123!',
-    email: 'test@me.com',
-    password: 'fish',
-    secret: 'newuser'
+    userName: 'Sally',
+    email: 'sally@me.com',
+    projects: ['some.txt', 'that.txt']
   }
+
   let sendStat;
 
   beforeEach((done) => {
@@ -48,3 +47,58 @@ describe('Utils.send should', () => {
     expect(fetchStat).toBe(202);
   });
 });
+
+describe('Utils.update should', () => {
+  let data = {
+    userName: 'Francis',
+    email: 'sally@me.com',
+    projects: ['some.txt', 'that.txt']
+  }
+
+  let updateStat;
+
+  beforeEach((done) => {
+    Utils.update(JSON.stringify(data), (res) => {
+      updateStat = res.status;
+      done();
+    });
+  });
+
+  it('be defined', () => {
+    expect(Utils.update).toBeDefined();
+  });
+
+  it('fetch should reveive data, with response 202', () => {
+    expect(updateStat).toBe(202);
+  });
+});
+
+describe('Utils.remove should', () => {
+  let data = {};
+
+  let removeStat;
+
+  beforeEach((done) => {
+    Utils.remove(data, (res) => {
+      removeStat = res.status;
+      done();
+    });
+  });
+
+  it('be defined', () => {
+    expect(Utils.remove).toBeDefined();
+  });
+
+  it('fetch should reveive data, with response 202', () => {
+    expect(removeStat).toBe(202);
+  });
+});
+
+
+
+
+
+
+
+
+
