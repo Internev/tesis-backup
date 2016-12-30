@@ -23,14 +23,14 @@
 
 <script>
   import Methods from '../js/tool_bar.js'
+  import Utils from '../js/utils.js'
 
   export default{
     created() {},
     props: ['wordCount'],
-    // Methods are located in js directory
-    methods: Methods
-  }
-
+      // Methods are located in js directory
+      methods: Methods
+    }
 </script>
 
 <style>

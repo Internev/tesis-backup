@@ -16,6 +16,7 @@
 <script>
   import Avatar from 'vue-avatar-component'
   import Methods from '../js/navbar.js'
+  import Utils from '../js/utils.js'
 
   export default {
     created() {},
@@ -23,7 +24,6 @@
     // Methods are located in js directory
     methods: Methods
   }
-
 </script>
 
 <style>

@@ -23,6 +23,7 @@
 <script>
   import ToolBar from './tool_bar.vue'
   import Methods from '../js/main_content.js'
+  import Utils from '../js/utils.js'
 
   export default {
     created() {
