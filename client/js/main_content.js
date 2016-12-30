@@ -5,7 +5,6 @@ module.exports = {
   // Function adds each charactor to input
   update(e) {
     this.input = e.target.value
-    // call socket io
     this.socket();
   },
   socket() {
