@@ -10,5 +10,7 @@
 
 ### Run Tests ###
  1. run - npm test (from root directory.)
- *(There's a bug I still need to work out so we can't run karma start yet.)
+ 2. in your browser go to localhost: http://localhost:9876/
+ 3. Click DEBUG
+ 4. All the tests will show in the console. You can also see them in the cli, however they are easier to read in the console.
 
