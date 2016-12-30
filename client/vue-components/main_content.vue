@@ -20,6 +20,7 @@
     <!-- end text feild -->
   </div>
 </template>
+
 <script>
   import ToolBar from './tool_bar.vue'
   import Methods from '../js/main_content.js'
