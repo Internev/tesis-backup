@@ -41,9 +41,10 @@
     "karma-webpack": "^1.8.1",
     "phantomjs": "^2.1.7",
     "style-loader": "^0.13.0",
-    "vue-hot-reload-api": "^2.0.6",
+    "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^7.3.0",
+    "watchify": "^3.8.0",
     "webpack": "^1.14.0"
   },
   "dependencies": {
@@ -53,6 +54,7 @@
     "socket.io": "^1.7.2",
     "underscore": "^1.8.3",
     "vue": "^2.1.7",
+    "vue-resource": "^1.0.3",
     "vue-socket.io": "^1.0.2"
   }
 }
