@@ -3,12 +3,7 @@
   <div class="left-side">
     <div class="tool-bar">
       <!-- Tool bar -->
-      <ul class="horizontal-ul">
-        <li class="file"><span class="glyphicon glyphicon-file"></span></li>
-        <li><span class="glyphicon glyphicon-repeat"></span></li>
-        <li><span class="glyphicon glyphicon-comment"></span></li>
-        <li><span class="glyphicon glyphicon-trash"></span></li>
-      </ul>
+      
       <!-- end tool bar -->
     </div>
     <!-- word counter -->
